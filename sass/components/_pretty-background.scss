@@ -1,0 +1,8 @@
+.pretty-background {
+  height: 300px;
+  background-image: linear-gradient(90deg, rgba(10,10,10,.3), rgba(200,150,180, .6)), url("../images/offer_background.jpg");
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom center;
+}

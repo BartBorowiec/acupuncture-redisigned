@@ -1,0 +1,40 @@
+html {
+  background-color: $global-background;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  font-size: calc(10px + 1vw);
+}
+body {
+  box-sizing: border-box;
+}
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+@media screen and (min-width: 1020px) {
+  .wrapper {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+section {
+  margin: 50px 0;
+}
+
+.section__header {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 40px 0;
+  &:after {
+    content: '';
+    display:block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: $accent-color;
+    box-shadow: -5px 3px 0 1px #D9DADC;
+  }
+}

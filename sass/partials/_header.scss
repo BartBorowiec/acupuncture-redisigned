@@ -1,0 +1,60 @@
+.hero {
+  height: 100vh;
+  background-image: url("../images/istockphoto-542566118-2048x2048.jpg");
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+
+  &-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &:before {
+      content: '';
+      background-color: $global-background;
+      flex-grow: 1;
+    }
+    &:after {
+      content: '';
+      background-color: $global-background;
+      flex-grow: 1;
+    }
+    span {
+      background-image: url("../images/curve.svg");
+      background-repeat: no-repeat;
+      display: block;
+      height: 85px;
+      width: 197px;
+    }
+  }
+
+  .continue {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid #707070;
+    background-color: #fff;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%) rotate(45deg);
+      width: 25px;
+      height: 25px;
+      border: 5px solid transparent;
+      border-bottom-color: $accent-color;
+      border-right-color: $accent-color;
+    }
+  }
+
+}
+

@@ -1,0 +1,123 @@
+.gallery {
+  text-align: center;
+  @media screen and (min-width: 1020px) {
+    & {
+      text-align: left;
+    }
+  }
+}
+.gallery-main {
+  width: 80%;
+  margin: 20px auto;
+}
+.gallery-main__image {
+  width: 100%;
+}
+
+.gallery-scroll {
+  display: flex;
+  position: relative;
+
+  &__next, &__prev {
+    border: none;
+    background: none;
+  }
+
+  &__prev {
+    order: 1;
+  }
+
+  &__inner {
+    position: relative;
+    flex-grow: 1;
+    order: 2;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__next {
+    order: 3;
+  }
+
+  &__item {
+    width: 100%;
+    position: absolute;
+    display: none;
+
+    &.active {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    width: 23%;
+    margin: 0 1%;
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .btn {
+    color: #ccc;
+    border-radius: 6px;
+    transition: .3s;
+    &:hover {
+      background-color: #ccc;
+      color: #888;
+    }
+
+  }
+}
+.item-next,
+.item-prev {
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.item-next {
+  left: 100%;
+}
+.item-prev {
+  left: -100%;
+}
+.item-left {
+  animation: slideInLeft 2s forwards;
+}
+
+.item-right {
+  animation: slideInRight 2s forwards;
+}
+
+.active-left {
+  animation: slideOutLeft 2s forwards;
+}
+.active-right {
+  animation: slideOutRight 2s forwards;
+}
+
+
+@keyframes slideInLeft {
+  from {left:100%;}
+  to {left:0;}
+}
+
+@keyframes slideInRight {
+  from {left:-100%;}
+  to {left:0;}
+}
+
+@keyframes slideOutLeft {
+  from {left:0;}
+  to {left:-100%;}
+}
+
+@keyframes slideOutRight {
+  from {left:0;}
+  to {left:100%;}
+}
