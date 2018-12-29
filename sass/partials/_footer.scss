@@ -16,21 +16,28 @@
   margin: 0 auto;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
-
+  @media screen and (min-width: 1020px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   &__link-to-top {
     text-decoration: none;
     color: #333;
-
+    position: relative;
+    padding: 20px;
     &:before {
       content:'';
       position: absolute;
       left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
       width: 0;
       height:0;
       border: 15px solid transparent;
-
+      border-bottom-color: $accent-color;
     }
   }
 }
