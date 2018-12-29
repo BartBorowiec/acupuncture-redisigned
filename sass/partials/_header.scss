@@ -41,20 +41,30 @@
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-
-    &:after {
+    cursor: pointer;
+    overflow: hidden;
+    &__link {
+      display: block;
+      width: 100%;
+      height:100%;
+    }
+    &__link:after {
       content: '';
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -75%) rotate(45deg);
       width: 25px;
       height: 25px;
       border: 5px solid transparent;
       border-bottom-color: $accent-color;
       border-right-color: $accent-color;
+      animation: continue 1s infinite alternate linear;
     }
   }
 
+}
+@keyframes continue {
+  from {transform: translate(-50%, -60%) rotate(45deg)}
+  to {transform: translate(-50%, -90%) rotate(45deg)}
 }
 

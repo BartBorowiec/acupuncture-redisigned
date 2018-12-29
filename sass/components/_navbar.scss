@@ -112,11 +112,14 @@
     }
     a {
       color: $accent-color;
-      line-height: 60px;
+      line-height: 100px;
       font-size: calc(15px + 0.3vw);
       font-weight: 600;
       text-decoration: none;
       transition: 0.3s;
+      width: 100%;
+      display: block;
+      text-align: center;
     }
 
   }
@@ -139,19 +142,19 @@
     font-weight: 600;
     color: $global-background;
   }
+  .navbar-links a {
+    color: $global-background;
+    font-size: calc(12px + 0.3vw);
 
-  li:hover {
+    line-height: 60px;
+  }
+
+  li:hover, .active {
     background-color: $global-background;
     transition: 0.3s;
     a {
       color: $accent-color;
     }
-  }
-  .navbar-links a {
-    color: $global-background;
-    font-size: calc(12px + 0.3vw);
-    font-weight: 600;
-    text-decoration: none;
   }
 
 }

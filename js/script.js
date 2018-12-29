@@ -56,15 +56,37 @@ document.addEventListener("DOMContentLoaded", function() {
     updateNavbar();
     const toggler = document.getElementById('toggler');
     const links = document.querySelector('.navbar-links');
+    const navs = document.querySelectorAll('.navbar-links li');
+    const sections = document.querySelectorAll('section');
     toggler.addEventListener("click", function () {
         links.classList.toggle('visible');
     });
 
     const gallery = new Gallery();
     gallery.addListeners();
-
+    navs.forEach(function(el) {
+        el.addEventListener("click", function(e){
+            navs.forEach(function(el){
+                el.classList.remove('active');
+            })
+            e.target.parentElement.classList.add('active');
+        })
+    });
     document.addEventListener("scroll", function(){
         updateNavbar();
+
+
+    });
+    document.addEventListener("wheel", function(){
+        sections.forEach(function(el, i){
+            const parameters = el.getBoundingClientRect();
+            const screenCenter = window.innerHeight/2;
+            if(screenCenter > parameters.top && screenCenter < parameters.bottom) {
+                navs[i].classList.add('active');
+            } else {
+                navs[i].classList.remove('active');
+            }
+        })
     });
 });
 
