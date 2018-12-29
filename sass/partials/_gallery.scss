@@ -87,18 +87,18 @@
   left: -100%;
 }
 .item-left {
-  animation: slideInLeft 2s forwards;
+  animation: slideInLeft 1s forwards;
 }
 
 .item-right {
-  animation: slideInRight 2s forwards;
+  animation: slideInRight 1s forwards;
 }
 
 .active-left {
-  animation: slideOutLeft 2s forwards;
+  animation: slideOutLeft 1s forwards;
 }
 .active-right {
-  animation: slideOutRight 2s forwards;
+  animation: slideOutRight 1s forwards;
 }
 
 

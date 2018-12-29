@@ -3,7 +3,7 @@ function Gallery() {
     this.items = document.querySelectorAll('.gallery-scroll__item');
     this.activeItem = 0;
     this.isSliding = false;
-    this.mainImage = document.querySelector('.gallery-main__image')
+    this.mainImage = document.querySelector('.gallery-main__image');
     this.images = document.querySelectorAll('.gallery-scroll__image');
 
     this.addListeners = function () {
@@ -32,7 +32,7 @@ function Gallery() {
                     //set new active item
                     this.items[this.activeItem].classList.add('active');
                     this.isSliding = false;
-                }, 2000)
+                }, 1000)
             } else {
                 this.activeItem === 0 ? this.activeItem = this.items.length - 1 : this.activeItem--;
                 //active slide out right
@@ -46,7 +46,7 @@ function Gallery() {
                     //set new active item
                     this.items[this.activeItem].classList.add('active');
                     this.isSliding = false;
-                }, 2000)
+                }, 1000)
             }
         }
     }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggler = document.getElementById('toggler');
     const links = document.querySelector('.navbar-links');
     toggler.addEventListener("click", function () {
-        links.classList.toggle('active');
+        links.classList.toggle('visible');
     });
 
     const gallery = new Gallery();
