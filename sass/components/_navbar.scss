@@ -41,13 +41,14 @@
     font-size: calc(15px + 0.5vw);
     font-weight: 600;
     transition: 0.3s;
+    text-decoration: none;
+    color: $accent-color;
   }
   &-toggler {
     border: none;
     background: none;
     padding: 0;
     margin: 20px 40px 30px 40px;
-    //align-self: flex-end;
 
     &-icon {
       display:block;

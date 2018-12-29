@@ -19,7 +19,6 @@ function Gallery() {
         if (!this.isSliding) {
             this.isSliding = true;
             const currentItem = this.activeItem;
-            console.log(event, event.target, this.buttons[0]);
             if(event.target === this.buttons[1] || event.target.parentElement === this.buttons[1]) {
                 this.activeItem === this.items.length - 1 ? this.activeItem = 0 : this.activeItem++;
                 //active slide out left
@@ -54,6 +53,7 @@ function Gallery() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    updateNavbar();
     const toggler = document.getElementById('toggler');
     const links = document.querySelector('.navbar-links');
     toggler.addEventListener("click", function () {
@@ -64,14 +64,14 @@ document.addEventListener("DOMContentLoaded", function() {
     gallery.addListeners();
 
     document.addEventListener("scroll", function(){
-        if (window.scrollY >= 50) {
-            document.querySelector(".navbar").classList.add('scrolled');
-        } else {
-            document.querySelector(".navbar").classList.remove('scrolled');
-        }
+        updateNavbar();
     });
-
-
-
-
 });
+
+function updateNavbar() {
+    if (window.scrollY >= 50) {
+        document.querySelector(".navbar").classList.add('scrolled');
+    } else {
+        document.querySelector(".navbar").classList.remove('scrolled');
+    }
+}

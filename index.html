@@ -5,8 +5,9 @@
     <title>Gabinet Akupunktury i Medycyny Bólu Dr Zbigniew Pawlak</title>
     <link rel="icon" type="image/png" href="images/pawlak_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400|Open+Sans:700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400|Thesadith:400&amp;subset=latin-ext" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/solid.js" integrity="sha384-F4BRNf3onawQt7LDHDJm/hwm3wBtbLIfGk1VSB/3nn3E+7Rox1YpYcKJMsmHBJIl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/regular.js" integrity="sha384-V+AkgA1cZ+p3DRK63AHCaXvO68V7B5eHoxl7QVN21zftbkFn/sGAIVR7vmQL3Zhp" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/fontawesome.js" integrity="sha384-treYPdjUrP4rW5q82SnECO7TPVAz4bpas16yuE9F5o7CeBn2YYw1yr5oC8s8Mf8t" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -19,7 +20,7 @@
                 <div class="navbar-brand__logo">
                     <img class="navbar-brand__image" src="images/pawlak_logo.png"
                                                      alt="Logo Gabinetu">
-                    <a class="navbar-brand__link">Gabinet Medycyny Bólu i Akupunktury</a>
+                    <a href="#" class="navbar-brand__link">Gabinet Medycyny Bólu i Akupunktury</a>
                 </div>
             </div>
 
@@ -34,6 +35,7 @@
             <ul class="navbar-links">
                 <li><a href="#about">O mnie</a></li>
                 <li><a href="#offer">Oferta</a></li>
+                <li><a href="#gallery">Galeria</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </div>
@@ -52,12 +54,7 @@
         <h2 class="section__header">O mnie</h2>
         <div class="about-content">
             <div class="about-content__text">
-                <p><span class="about-content__text about-content__text--emphasised">Nazywam się Zbigniew Pawlak. Jestem lekarzem, specjalistą anestezjologii i intensywnej terapii, absolwentem I Wydziału Lekarskiego Warszawskiego Uniwersytetu Medycznego (dawnej Akademii Medycznej w Warszawie).</span> Ukończyłem również dwuletnie studia podyplomowe z zakresu Medycyny Bólu na Uniwersytecie Jagiellońskim w Krakowie. Posiadam wieloletnie doświadczenie w diagnostyce i kompleksowym leczeniu zespołów bólowych o różnorakiej i złożonej etiologii, z wykorzystaniem zarówno metod farmakologicznych jak i wielu opcji terapii niefarmakologicznych.</p>
-                <!--<p>Stosowanie wielotorowej terapii multimodalnej, polegającej na łączeniu różnych metod i technik terapii-->
-                    <!--oraz holistyczne podejście do Pacjenta, pozwala w większości dolegliwości uzyskać zadowalające, a w-->
-                    <!--wielu przypadkach wręcz zdumiewające efekty.</p>-->
-                <!--<p>Zdobyte wyszkolenie i doświadczenie w stosowaniu klasycznej akupunktury pozwala na stosowanie tej metody-->
-                    <!--nie tylko w leczeniu bólu, ale również w wielu innych chorobach i dolegliwościach.</p>-->
+                <p><span class="about-content__text about-content__text--emphasised">Nazywam się Zbigniew Pawlak. Jestem lekarzem, specjalistą anestezjologii i intensywnej terapii, absolwentem I Wydziału Lekarskiego Warszawskiego Uniwersytetu Medycznego (dawnej Akademii Medycznej w Warszawie).</span><br>Ukończyłem dwuletnie studia podyplomowe z zakresu Medycyny Bólu na Uniwersytecie Jagiellońskim w Krakowie. Posiadam wieloletnie doświadczenie w diagnostyce i kompleksowym leczeniu zespołów bólowych o różnorakiej i złożonej etiologii, z wykorzystaniem zarówno metod farmakologicznych jak i wielu opcji terapii niefarmakologicznych.</p>
             </div>
             <div class="about-content__image">
                 <img src="./images/DSC_0038_2.jpg" alt="Zbigniew Pawlak">
@@ -76,13 +73,13 @@
 
 <div class="pretty-background"></div>
 
-<section class="offer">
+<section id="offer" class="offer">
     <div class="wrapper">
         <h2 class="section__header">Oferta</h2>
     </div>
 </section>
 
-<section class="gallery">
+<section id="gallery" class="gallery">
     <div class="wrapper">
         <h2 class="section__header">Galeria</h2>
         <div class="gallery-content">
@@ -123,26 +120,54 @@
     </div>
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
     <div class="wrapper">
         <h2 class="section__header">Kontakt</h2>
         <div class="contact-content">
-            <div>
+            <div class="contact-address">
                 <p>Gabinet Medycyny Bólu i Akupunktury</p>
                 <hr>
                 <p>
                     Centrum Zdrowia Aleksandrowska<br>
                     Aleksandrowska 4<br>
-                    08-110 Siedlce
+                    <i class="far fa-envelope"></i> 08-110 Siedlce
                 </p>
                 <hr>
-                <p>Umawianie wizyt pod numerem<br>536 248 988</p>
+                <p>Umawianie wizyt pod numerem<br><i class="fas fa-phone"></i> 536 248 988</p>
+            </div>
+            <div id="map" class="contact-map">
+                <script>
+                    function initMap() {
+                        var gabinet = {lat: 52.173061, lng: 22.283728};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 15,
+                            center: gabinet
+                        });
+                        var marker = new google.maps.Marker({
+                            position: gabinet,
+                            map: map
+                        });
+                    }
+                </script>
+
             </div>
         </div>
     </div>
 </section>
 
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer-content">
+            <p class="footer-content__copyright">&copy; Gabinet Terapii Bólu i Akupunktury lek.&nbsp;Zbigniew Pawlak 2018<br>Created by Bart Borowiec</p>
 
+            <a class="footer-content__link-to-top" href="#">Powrót&nbsp;do&nbsp;góry</a>
+        </div>
+    </div>
+</footer>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5SGp8e057ZHzTNpSI-CoJr_WU0RWNGos&callback=initMap">
+</script>
 <script src="./js/script.js"></script>
 </body>
 </html>

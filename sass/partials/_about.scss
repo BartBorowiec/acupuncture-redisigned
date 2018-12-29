@@ -12,13 +12,14 @@
 .about-content {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+
   align-items: center;
   width: 100%;
 
   @media screen and (min-width: 1020px) {
     & {
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
   }
@@ -37,7 +38,7 @@
 
   p {
 
-    line-height: 36px;
+    line-height: 2rem;
   }
 
   &--emphasised {
@@ -59,7 +60,7 @@
 
 .about-content__image {
   width: 80%;
-  margin:50px;
+  margin: 5%;
 
   @media screen and (min-width: 1020px) {
     & {
