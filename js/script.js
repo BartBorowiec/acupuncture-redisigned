@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navs = document.querySelectorAll('.navbar-links li');
     const sections = document.querySelectorAll('section');
     toggler.addEventListener("click", function () {
+        toggler.classList.toggle('open');
         links.classList.toggle('visible');
     });
 

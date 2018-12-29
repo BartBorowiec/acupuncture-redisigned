@@ -47,7 +47,7 @@
     border: none;
     background: none;
     padding: 0;
-    margin: 20px 40px 30px 40px;
+    margin: 0 0 20px 20px;
     cursor: pointer;
     height: 20px;
     width: 25px;
@@ -55,31 +55,45 @@
       outline: none;
     }
     &-icon {
-      display:block;
+      display:inline-block;
       width: 25px;
       height: 2px;
-      background-color: #666;
+      background-color: #333;
       position: relative;
-      top: -10px;
-
-
+      top: 7px;
+      transition: 0.3s;
       &:before {
+        content: '';
+        position: absolute;
+        display:block;
+        top: -7px;
+        width: 25px;
+        height: 2px;
+        background-color: #333;
+        transition: 0.3s;
+      }
+      &:after {
         content: '';
         position: absolute;
         display:block;
         top: 7px;
         width: 25px;
         height: 2px;
-        background-color: #666;
+        background-color: #333;
+        transition: 0.3s;
       }
-      &:after {
-        content: '';
-        position: absolute;
-        display:block;
-        top: 14px;
-        width: 25px;
-        height: 2px;
-        background-color: #666;
+    }
+    &.open {
+      .navbar-toggler-icon {
+        background-color: transparent;
+        &:before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &:after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
       }
     }
 
@@ -95,31 +109,44 @@
     flex-direction: column;
     align-items: stretch;
     flex-grow: 1;
-
+    background-color: rgba(51,51,51,.3);
     @media screen and (min-width: 600px) {
       & {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        background: none;
       }
     }
+
     li {
       display: flex;
       align-items: stretch;
       justify-content: center;
-      min-width: 15%;
-      max-width: 25%;
+      max-width: 100%;
+
+      @media screen and (min-width: 600px){
+        & {
+          min-width: 15%;
+          max-width: 25%;
+        }
+      }
     }
     a {
       color: $accent-color;
-      line-height: 100px;
       font-size: calc(15px + 0.3vw);
       font-weight: 600;
+      line-height: 30px;
       text-decoration: none;
       transition: 0.3s;
       width: 100%;
       display: block;
       text-align: center;
+      @media screen and (min-width: 600px){
+        & {
+          line-height: 100px;
+        }
+      }
     }
 
   }
@@ -141,6 +168,9 @@
     font-size: calc(12px + 0.5vw);
     font-weight: 600;
     color: $global-background;
+  }
+  .navbar-links {
+    background: none;
   }
   .navbar-links a {
     color: $global-background;
