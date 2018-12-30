@@ -1,8 +1,8 @@
 .about {
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1025px) {
     & {
       text-align: left;
     }
@@ -16,7 +16,7 @@
   align-items: center;
   width: 100%;
 
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1025px) {
     & {
       flex-direction: row;
       flex-wrap: wrap;
@@ -26,11 +26,10 @@
 }
 
 .about-content__text {
-  width: 80%;
   text-align: left;
 
 
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1025px) {
     & {
       width: 65%;
     }
@@ -46,14 +45,10 @@
   }
 
   &--bottom {
-    width: 80%;
-    @media screen and (min-width: 1020px) {
-      & {
-        width: 100%;
-      }
-    }
+    width: 100%;
     p {
       text-align: left;
+
     }
   }
 }
@@ -61,7 +56,7 @@
 .about-content__image {
   width: 80%;
   margin: 5%;
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1025px) {
     & {
       display: flex;
       justify-content: flex-end;

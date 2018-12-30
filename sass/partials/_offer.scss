@@ -1,8 +1,14 @@
 .offer {
   text-align: center;
-  @media screen and (min-width: 1020px) {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2rem;
+
+  @media screen and (min-width: 1025px) {
     & {
+      width: 100%;
       text-align: left;
     }
   }
+
 }

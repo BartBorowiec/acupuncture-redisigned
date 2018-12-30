@@ -70,14 +70,15 @@ document.addEventListener("DOMContentLoaded", function() {
             navs.forEach(function(el){
                 el.classList.remove('active');
             })
+            toggler.classList.remove('open');
+            links.classList.toggle('visible');
             e.target.parentElement.classList.add('active');
         })
     });
     document.addEventListener("scroll", function(){
         updateNavbar();
-
-
     });
+    
     document.addEventListener("wheel", function(){
         sections.forEach(function(el, i){
             const parameters = el.getBoundingClientRect();

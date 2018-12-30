@@ -7,21 +7,20 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  @media screen and (min-width: 1020px){
+  @media screen and (min-width: 1025px){
     height: 300px;
     background-image: linear-gradient($global-background 80%,transparent),url("../images/sakura2bw.jpg");
 }
 }
 .footer-content {
-  width: 90%;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1025px) {
     flex-direction: row;
     justify-content: space-between;
   }
