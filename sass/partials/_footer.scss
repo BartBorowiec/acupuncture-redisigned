@@ -3,8 +3,10 @@
   background-attachment: fixed;
   height: 150px;
   background-position: bottom right;
-  background-size: cover;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
   @media screen and (min-width: 1020px){
     height: 300px;
     background-image: linear-gradient($global-background 80%,transparent),url("../images/sakura2bw.jpg");
