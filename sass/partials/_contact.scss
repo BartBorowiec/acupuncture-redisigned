@@ -21,6 +21,13 @@
       flex-direction: row;
     }
   }
+  &__link {
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 .contact-address {
   width: 100%;

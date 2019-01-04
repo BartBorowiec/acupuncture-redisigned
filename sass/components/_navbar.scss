@@ -1,4 +1,5 @@
 .navbar {
+  background-color: $global-background;
   position: fixed;
   width: 100%;
   color: $accent-color;
@@ -131,6 +132,15 @@
 
 
     li {
+      &:hover {
+        background-color: $accent-color;
+        transition: 0.3s;
+        align-self: stretch;
+        a {
+          color: $global-background;
+        }
+      }
+
       @media screen and (min-width: 800px){
         & {
           margin-left: 5px;
@@ -143,7 +153,7 @@
       color: $accent-color;
       font-size: calc(15px + 0.3vw);
       font-weight: 600;
-      line-height: 30px;
+      line-height: 60px;
       text-decoration: none;
       transition: 0.3s;
       width: 100%;

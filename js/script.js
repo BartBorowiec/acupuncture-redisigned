@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("scroll", function(){
         updateNavbar();
     });
-    
+
     document.addEventListener("wheel", function(){
         sections.forEach(function(el, i){
             const parameters = el.getBoundingClientRect();

@@ -7,11 +7,20 @@
   }
 }
 .gallery-main {
-  width: 80%;
+  display: flex;
+  justify-content: center;
   margin: 20px auto;
+  height: 60vh;
+  @media screen and (min-width: 1025px) {
+    & {
+      width: 80%;
+    }
+  }
 }
 .gallery-main__image {
   width: 100%;
+  object-fit: contain;
+
 }
 
 .gallery-scroll {
@@ -52,14 +61,23 @@
 
   &__image {
     width: 23%;
+    height: 100px;
+
     margin: 0 1%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: 1025px) {
+      & {
+        height: 25vh;
+      }
+    }
   }
 
   img {
-    width: 100%;
+    object-fit: contain;
     cursor: pointer;
-    border-radius: 5px;
   }
 
   .btn {

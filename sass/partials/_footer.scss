@@ -24,9 +24,12 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  &__link-to-top {
+  &__link {
     text-decoration: none;
     color: #333;
+  }
+  &__link-to-top {
+
     position: relative;
     padding: 20px;
     &:before {
